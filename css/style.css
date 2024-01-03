@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 .container {
   max-width: 1140px;
@@ -504,9 +505,6 @@ footer {
   background-color: #faf9f9;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-}
 /* RESPONIVE   ///////////////////// */
 @media (max-width: 1130px) {
   .prodacts-cards {
@@ -555,7 +553,7 @@ footer {
   }
   #navbar-responsive {
     position: fixed;
-    top: 120px;
+    top: 60px;
     bottom: 0;
     left: -100%;
     height: 50vh;
@@ -594,5 +592,75 @@ footer {
   .home-section-image {
     display: grid;
     place-self: center;
+  }
+}
+@media (max-width: 500px) {
+  .home-heading h1,
+  p .form-btn {
+    max-width: 450px;
+  }
+  .about-card {
+    max-width: 450px;
+    grid-template-columns: 1fr;
+  }
+  .about-cards {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(2, 430px);
+  }
+  .about-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-card-content h2 {
+    margin-top: 8px;
+  }
+  .about-card-content p {
+    max-width: 140px;
+  }
+  .about-card-content .prg-2 {
+    max-width: 140px;
+  }
+  .home-section-content {
+    max-width: 500px;
+  }
+  .home {
+    grid-template-columns: 300px;
+  }
+  .form-btn button {
+    top: 70px;
+    right: 120px;
+  }
+  .home-paragrph p {
+    max-width: 300px;
+  }
+  .search-input {
+    max-width: 400px;
+    width: 100%;
+  }
+  .home-section-image {
+    margin-top: 50px;
+  }
+  .gmail-content button {
+    width: 133px;
+    height: 44px;
+    top: 220px;
+    left: 120px;
+  }
+  .contact-content img {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 389px) {
+  .card-image {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+  }
+  .gmail-content button {
+    width: 133px;
+    height: 44px;
+    top: 240px;
+    left: 100px;
   }
 }
