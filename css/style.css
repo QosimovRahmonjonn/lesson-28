@@ -105,6 +105,7 @@ header {
   margin-left: 20px;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 #light-dark svg {
   fill: #fff;
@@ -448,6 +449,12 @@ footer {
 .dark * {
   color: white !important;
 }
+.dark input {
+  background: #817681;
+}
+.dark input::placeholder {
+  color: #fff;
+}
 .dark .brand-card {
   background: #4a424a;
 }
@@ -468,7 +475,124 @@ footer {
 .dark footer {
   background: #191819;
 }
+.dark input[type="text"] {
+  color: rgb(0, 0, 15);
+}
 .about-section {
   display: flex;
   justify-content: center;
+}
+/* NAVBAR RESPONSIVE //////////////// */
+#navbar-responsive.open {
+  left: 0;
+}
+
+.menu-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+}
+
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #faf9f9;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+}
+/* RESPONIVE   ///////////////////// */
+@media (max-width: 1130px) {
+  .prodacts-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1050px) {
+  .about-cards {
+    grid-template-columns: 450px;
+    grid-template-rows: repeat(2, 240px);
+    row-gap: 20px;
+    justify-content: center;
+  }
+  .brand-cards {
+    grid-template-columns: 320px;
+    grid-template-rows: repeat(3, 240px);
+    row-gap: 20px;
+    justify-content: center;
+    margin: 30px auto 50px;
+  }
+  .prodacts-btn button {
+    margin: 50px auto 70px;
+  }
+  .contact-content {
+    margin-bottom: 0;
+  }
+  .home {
+    grid-template-columns: repeat(1, 450px);
+    grid-template-rows: 2;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    justify-content: center;
+  }
+  .home-input button {
+    right: 15px;
+  }
+  .gmail-content {
+    padding: 16px;
+  }
+  .gmail-content button {
+    bottom: 21px;
+    right: 22px;
+  }
+  .prodacts-card h3 {
+    margin-top: 8px;
+  }
+  #navbar-responsive {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    left: -100%;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #322e2e;
+    transition: 0.5s;
+    /* place-content: center  */
+  }
+
+  .menu-btn {
+    display: grid;
+    place-self: end;
+  }
+  .nav-link {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .nav-icon img {
+    grid-template-columns: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .prodacts-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  .home-section-image img {
+    width: 300px;
+  }
+  .home-section-image {
+    display: grid;
+    place-self: center;
+  }
 }
